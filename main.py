@@ -7,6 +7,8 @@ from constants import *
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    clock = pygame.time.Clock()
+    dt = 0
 
     while True:
         #exit program by mouse
@@ -15,10 +17,13 @@ def main():
                 return
         
         #fill the screen with black
-        screen.fill((0, 0, 0))
+        screen.fill("black")
         
         #update display
         pygame.display.flip()
+        
+        # set fps limit
+        dt = clock.tick(60) / 1000.0
 
 if __name__ == "__main__":
     main()
