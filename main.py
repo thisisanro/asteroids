@@ -17,6 +17,9 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+            
+        # move player left and right
+        player.update(dt)
         
         #fill the screen with black
         screen.fill("black")
