@@ -60,7 +60,7 @@ def main():
         for asteroid in asteroids:
             for shot in shots:
                 if shot.collides(asteroid):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
         
         # set 60 fps limit
